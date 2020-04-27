@@ -1,0 +1,39 @@
+# docker安装
+
+# ubuntu安装docker
+
+```shell
+# 卸载旧版本docker
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+# 您需要设置Docker存储库以使用以下命令从存储库安装和更新Docker。
+$ sudo apt-get update
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+# 使用以下命令更新apt软件包索引并安装最新版本的Docker CE。
+$  sudo apt-get update
+$  sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+
+
+# centos7安装docker
+
+```shell
+# step 1: 安装必要的一些系统工具
+$ yum install -y yum-utils device-mapper-persistent-data lvm2
+
+#Step 2: 添加软件源信息
+$ yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+# Step 3: 更新并安装 Docker-CE
+$ yum makecache fast
+$ yum -y install docker-ce
+# Step 4: 开启Docker服务
+$ systemctl enable docker
+$ systemctl start docker 
+$ systemctl status docker
+```
+
