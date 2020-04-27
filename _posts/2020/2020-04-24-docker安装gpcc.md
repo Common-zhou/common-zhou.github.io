@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "greenplum运维相关知识"
-categories: greenplum
-tags: greenplum
-excerpt: greenplum
+title:  "docker安装gpcc"
+categories: gpcc
+tags: gpcc
+excerpt: gpcc
 auth: zhou
 ---
 * content
