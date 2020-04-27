@@ -55,15 +55,4 @@ type: page
 ## notepad++ 插件
 -  js代码压缩,js代码格式化,JSON查看器: JSMinNpp
 
-## 科学上网
 
-
-### 免费资源
-
-**ssr订阅**
-- [AutoSSR](https://raw.githubusercontent.com/voken100g/AutoSSR/master/stable)
-- [SSRSUB](https://raw.githubusercontent.com/ssrsub/ssr/master/ssrsub)
-
-## Comments
-
-{% include comments.html %}

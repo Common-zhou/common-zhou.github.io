@@ -2,7 +2,7 @@
 layout: post
 title:  "docker安装gpcc"
 categories: gpcc
-tags: gpcc
+tags: gpcc docker
 excerpt: gpcc
 auth: zhou
 ---
