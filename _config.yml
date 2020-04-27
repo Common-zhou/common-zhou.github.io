@@ -1,1 +1,64 @@
-theme: jekyll-theme-slate
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+encoding: utf-8
+# Site settings
+title: Zhou
+brief-intro: Study hard, improve every day.
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://Common-zhou.github.io' # the base hostname & protocol for your site
+
+permalink: /:year/:month/:day/:title/
+
+# other links
+twitter_username:
+facebook_username:
+github_username: 
+email: 
+weibo_username: 
+zhihu_username:
+linkedIn_username:
+dribbble_username:
+
+description_footer: 本站记录我成长之路的点点滴滴！
+
+# comments
+# 三种评论插件，选一个就好了
+disqus_shortname: #zhou
+gitalk:
+  enable: false
+  clientID: 0f2905fdcd849f08a1c5
+  clientSecret: c6bfab960df0d7c3af036756e7e2bcd00a44a9e6
+  repo: common-zhou.github.io
+  owner: zhou
+  admin: zhou
+utteranc_es:
+  enable: true
+  repo: 'common-zhou.github.io'
+  issue-term: pathname
+  theme: github-light
+
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# port
+# port: 1234
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n\n\n"
+
+# paginate
+plugins: [jekyll-paginate]
+paginate: 10
