@@ -46,7 +46,7 @@ $ gpstate -Q
 $ gpstate -i
 ```
 
-### 1.2系统表gp_segment_configuration
+### 1.2 系统表gp_segment_configuration
 
 ```sql
 select * FROM gp_segment_configuration;
@@ -54,13 +54,71 @@ select * FROM gp_segment_configuration;
 --列出当前故障离线的节点
 select * from gp_segment_configuration where status = 'd';
 
+--列出集群里每个服务器正在运行的节点个数
+select hostname,count(dbid) from gp_setment_configuration 
+where status = 'u' and role = 'p' 
+group by hostname;
+```
 
+### 1.3 Sement的故障恢复和再平衡
+
+​		gp集群的数据节点（primary或者mirror）可能发生故障。配置了mirror的gp集群具备高可用特性，当节点因故障离线时仍然保持数据完整且可以读写。在排查修复可能的硬件故障之后，因尽快利用gprecoverseg命令将故障的节点恢复到正常的工作状态。
+
+#### ①起始状态
+
+![1587971189545](\assets\1587971189545.png)
+
+#### ②主机二上一台primary挂了
+
+![1587971299967](\assets\1587971299967.png)
+
+
+
+#### ③解除硬件故障后
+
+![1587971456908](\assets\1587971456908.png)
+
+虽然此时可以正常使用 但是主机一有三台primary 主机二只有一台 这样负载不均衡
+
+管理员可以在Master上运行以下命令再平衡节点以恢复集群性能
+
+```shell
+$ gprecocerseg -r
 ```
 
 
 
 
 
+### 1.4 gp日志位置
+
+| 路径                                      | 描述                                                         |
+| ----------------------------------------- | ------------------------------------------------------------ |
+| /home/gpadmin/gpAdminLogs/*               | 多种命令行工具产生的日志，包括gpstart/gpstop/gpinitsystem/gpconfig |
+| $MASTER_DATA_DIRECTORY/pg_log/startup.log | postgreSQL启动日志                                           |
+| $MASTER_DATA_DIRECTORY/pg_log/gpdn-*.csv  | greenplum活动日志                                            |
+| /var/log/messages                         | linux系统日志                                                |
+
+
+
+
+
 ## 2.管理gp集群
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 3.gpcc
