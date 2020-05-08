@@ -35,38 +35,29 @@ auth: zhou
 
 ## 二、 测试方法概述
 
- 
+
 测试基准工具:smart-slap(mysqlslap)，Jmeter模拟若干客户端、若干用户执行指定的SQL语句，访问数据库。同时，通过监控工具监控系统负载、mysql数据库的服务，全面了解数据库系统以及硬件的负载情况。
- 
+
 测试模型
 测试监控及结果统计
 监控工具统计如下信息，分析性能瓶颈。
- 
-系统负载：
+
+系统负载：<font color='red'>采用WGCLOUD监控</font>
 CPU:CUP_IDLE 、CPU_WA、SERVER_LOADAVG
 内存：MEM_URATE、MEM_USED
 网卡：NIC_TOTAL_IN、NIC_TOTAL_OUT、
-数据库负载：
+数据库负载：<font color='red'>测试工具监控</font>
 QPS:COM_READS、COM_WEITES
 主从延迟：SECOND_BEHIND_MASTER
 慢查询：SLOW_QUERIES_PT
 连接数：THREADS_CONNECTED、THREADS_RUNNING
- 
+
 STL-tools 监控集群负载
- 
+
 附：性能指标：
- 
-系统负载：
-CPU:CUP_IDLE 、CPU_WA、SERVER_LOADAVG
-内存：MEM_URATE、MEM_USED
-网卡：NIC_TOTAL_IN、NIC_TOTAL_OUT、
- 
-数据库负载：
-QPS:COM_READS、COM_WEITES
-主从延迟：SECOND_BEHIND_MASTER
-慢查询：SLOW_QUERIES_PT
-连接数：THREADS_CONNECTED、THREADS_RUNNING
- 
+
+
+
 
 ## 三、 测试准备
 
