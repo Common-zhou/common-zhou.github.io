@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "centos系统环境配置"
+title:  "centos安装Java8"
 categories: Linux
-tags: Linux centos
-excerpt: centos常见软件配置,centos7.3
+tags: Linux centos java
+excerpt: centos安装Java8
 auth: zhou
 ---
 * content
