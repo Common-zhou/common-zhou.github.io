@@ -1,14 +1,14 @@
+---
 layout: post
 title:  "jenkins的Job"
 categories: jenkins
-tags: jenkins Job
+tags: jenkins
 excerpt: jenkins的两种Job
 auth: zhou
+---
 
 * content
 {:toc}
-
-
 # 1.jenkins的两种Job
 
 Freestyle和Pipeline。
