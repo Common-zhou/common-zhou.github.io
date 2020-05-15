@@ -16,8 +16,8 @@ permalink: /:year/:month/:day/:title/
 # other links
 twitter_username:
 facebook_username:
-github_username: 
-email: 
+github_username: Common-zhou
+email: 1050015785@qq.com
 weibo_username: 
 zhihu_username:
 linkedIn_username:
@@ -27,20 +27,32 @@ description_footer: 本站记录我成长之路的点点滴滴！
 
 # comments
 # 三种评论插件，选一个就好了
-disqus_shortname: #zhou
+disqus_shortname: #Common-zhou
 gitalk:
   enable: false
   clientID: 0f2905fdcd849f08a1c5
   clientSecret: c6bfab960df0d7c3af036756e7e2bcd00a44a9e6
-  repo: common-zhou.github.io
-  owner: zhou
-  admin: zhou
+  repo: Common-zhou.github.io
+  owner: Common-zhou
+  admin: Common-zhou
 utteranc_es:
   enable: true
-  repo: 'common-zhou.github.io'
+  repo: 'Common-zhou/Common-zhou.github.io'
   issue-term: pathname
   theme: github-light
 
+# 赞赏
+reward:
+  enable: true
+  wechat: /assets/images/reward/wechat.png
+  alipay: /assets/images/reward/alipay.png
+
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+baidu_tongji_id:
+google_analytics_id:
 
 # Build settings
 markdown: kramdown
