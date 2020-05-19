@@ -24,12 +24,10 @@ auth: zhou
 ```shell
 JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64
 JRE_HOME=JAVA_HOME/jre
-PATH=PATH:JAVA_HOME/bin
-CLASSPATH=.:JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+PATH=$PATH:JAVA_HOME/bin
 export JAVA_HOME
 export JRE_HOME
 export PATH
-export CLASSPATH
 ```
 
 ![img](/assets/605186-20180921175203524-914200237.png)
