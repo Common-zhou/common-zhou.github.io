@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "template"
-categories: template
-tags: template
-excerpt: template
+title:  "springcloud组件"
+categories: springcloud
+tags: springcloud
+excerpt: springcloud基础组件认识及使用
 auth: zhou
 ---
 
@@ -219,3 +219,19 @@ spring:
     }
 ```
 
+## 2.2Ribbon使用
+
+```java
+需要在restTemplate注解的地方增加一个@LoadBalanced注解
+@GetMapping("/user/ribbon")
+@ResponseBody
+public User queryUserByIdRibbon(@RequestParam("id") Long id) {
+    //直接写服务名就可以调用服务，并且有ribbon做负载均衡
+    String baseUrl = "http://service-provider/user/" + id;
+
+    User user = this.restTemplate.getForObject(baseUrl, User.class);
+    return user;
+}
+```
+
+## 2.3hystix使用
