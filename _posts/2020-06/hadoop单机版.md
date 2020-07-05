@@ -70,6 +70,7 @@ export JAVA_HOME=/opt/soft/jdk1.8.0_181
  
 
 
+
 5.配置本机ssh免密码登录
 
 ssh-keygen -t rsa  命令后一路回车，不输入任何东西
@@ -154,4 +155,18 @@ yarn启动完成后，浏览器输入：http://192.168.2.14:8088   (8088是默�
 
 
 到这里，hdfs和yarn就启动成功了
+
+
+
+
+
+
+
+
+
+搭建Spark
+
+出现slf4j的jar包找不到，可以直接拷贝
+
+<https://blog.csdn.net/zhaojw_420/article/details/53169915>
 
